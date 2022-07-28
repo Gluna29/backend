@@ -11,9 +11,9 @@ import javax.persistence.Id;
 
 @Entity
 
-public class Experiencia {
+public class Experiencia{
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id;
 private String nombreE;
 private String descripcionE;

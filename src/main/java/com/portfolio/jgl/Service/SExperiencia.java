@@ -21,10 +21,10 @@ RExperiencia rExperiencia;
   public List<Experiencia> list(){
      return rExperiencia.findAll();
   }
-  public Optional<Experiencia>getOne(int id){
+  public Optional <Experiencia>getOne(int id){
       return rExperiencia.findById(id);
   }
-  public Optional<Experiencia>getByNombre(String nombreE){
+  public Optional <Experiencia>getByNombreE(String nombreE){
       return rExperiencia.findByNombreE(nombreE);
   }
   public void save(Experiencia expe){
