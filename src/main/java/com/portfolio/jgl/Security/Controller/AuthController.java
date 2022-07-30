@@ -70,14 +70,14 @@ public class AuthController {
         if (nuevoUsuario.getRoles().contains("admin")) 
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
 
-            usuario.setRoles(roles);
+                usuario.setRoles(roles);
             usuarioService.save(usuario);
 
             return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);
 
         }
 
-        @PostMapping("/login")
+        @PostMapping("login")
         public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) 
                 return new ResponseEntity(new Mensaje("Campos mal puestos"), HttpStatus.BAD_REQUEST);
