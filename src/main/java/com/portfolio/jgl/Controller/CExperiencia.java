@@ -31,7 +31,7 @@ public class CExperiencia {
     SExperiencia sExperiencia;
     
  
-    @GetMapping("lista")
+    @GetMapping("/lista")
     public ResponseEntity<List<Experiencia>> list(){
         List<Experiencia> list = sExperiencia.list();
         return new ResponseEntity(list, HttpStatus.OK);
