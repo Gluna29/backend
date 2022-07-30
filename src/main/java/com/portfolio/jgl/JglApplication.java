@@ -14,10 +14,10 @@ public class JglApplication {
 	}
 @Bean
 	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
+		return new WebMvcConfigurer(){
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://apjgl.herokuapp.com").allowedMethods("**").allowedHeaders("**");
+				registry.addMapping("/**").allowedOrigins("https://apjgl.herokuapp.com").allowedMethods("*").allowedHeaders("*") .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
 			}
 		};
                 
