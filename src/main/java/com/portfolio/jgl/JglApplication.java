@@ -17,7 +17,7 @@ public class JglApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://apjgl.herokuapp.com").allowedMethods("*");
+				registry.addMapping("**").allowedOrigins("http://apjgl.herokuapp.com").allowedMethods("*");
 			}
 		};
 	}
