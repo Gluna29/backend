@@ -3,6 +3,7 @@ package com.portfolio.jgl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -15,10 +16,13 @@ public class JglApplication {
 @Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
+
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("**").allowedMethods("*").allowedHeaders("*");
+
+				registry.addMapping("/**").allowedOrigins("https://apjgl.herokuapp.com");
 			}
 		};
 	}
+	
 }
