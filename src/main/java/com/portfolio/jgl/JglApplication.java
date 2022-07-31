@@ -23,7 +23,7 @@ public class JglApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 
-				registry.addMapping("/**").allowedOrigins("https://apjglfront.web.app/");
+				registry.addMapping("/**").allowedOrigins("https://apjglfront.web.app/").allowedHeaders("*");
 			}
 		};
 	}
