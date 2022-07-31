@@ -17,7 +17,7 @@ public class JglApplication {
 		return new WebMvcConfigurer(){
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://apjgl.herokuapp.com").allowedMethods("*").allowedHeaders("*") .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
+				registry.addMapping("/**").allowedOrigins("https://apjglfront.web.app").allowedMethods("*").allowedHeaders("*") .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials");
 			}
 		};
                 
