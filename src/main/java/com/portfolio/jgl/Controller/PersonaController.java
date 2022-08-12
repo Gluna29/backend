@@ -6,7 +6,6 @@ import com.portfolio.jgl.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
-     @PreAuthorize("hasRole ('user')")  
+     @PreAuthorize("hasRole ('*')")  
      @GetMapping("personas/traer")
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
