@@ -31,7 +31,7 @@ public class CExperiencia {
     @Autowired
     SExperiencia sExperiencia;
     
-
+ @CrossOrigin(origins = "https://apjgl.herokuapp.com/")
     @GetMapping("lista")
     public ResponseEntity<List<Experiencia>> list(){
         List<Experiencia> list = sExperiencia.list();
