@@ -25,14 +25,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("explab")
-@CrossOrigin(origins = "http://apjglfront.web.app")
+@RequestMapping("expLab")
+@CrossOrigin(origins = "http://apjglfront.web.app/")
 
 public class CExperiencia {
     @Autowired
     SExperiencia sExperiencia;
     
-    @GetMapping("/lista")
+    @GetMapping("lista")
     public ResponseEntity<List<Experiencia>> list(){
         List<Experiencia> list = sExperiencia.list();
         return new ResponseEntity(list, HttpStatus.OK);
