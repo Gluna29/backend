@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "https://apjglfront.web.app/")
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
-
+  @PreAuthorize("hasRole(‘ROLE_VIEWER')")
      @GetMapping("personas/traer")
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
