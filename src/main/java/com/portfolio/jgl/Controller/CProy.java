@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/proy")
-@CrossOrigin(origins = "http://apjglfront.web.app")
+@CrossOrigin(origins = "http://apjglfront.web.app/")
 public class CProy {
     @Autowired
     SProy sProy;
