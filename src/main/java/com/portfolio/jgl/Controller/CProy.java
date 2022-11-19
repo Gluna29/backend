@@ -82,6 +82,7 @@ public class CProy {
         
         proy.setNombreP(dtoproy.getNombreP());
         proy.setDescripcionP(dtoproy.getDescripcionP());
+        proy.setImg(dtoproy.getImg());
         
         sProy.save(proy);
         return new ResponseEntity(new Mensaje("Proyecto actualizado"),HttpStatus.OK);
