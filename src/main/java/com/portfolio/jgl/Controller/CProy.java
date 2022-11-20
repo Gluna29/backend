@@ -29,6 +29,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class CProy {
     @Autowired
     SProy sProy;
+  
+    
+    
     
     @GetMapping("/lista")
     public ResponseEntity<List<Proy>>list(){
