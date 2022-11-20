@@ -45,7 +45,7 @@ public class CProy {
         return new ResponseEntity(proy, HttpStatus.OK);
     }
     
-    @DeleteMapping("/delete/({id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id")int id){
         if (!sProy.existsById(id)){
             return new ResponseEntity(new Mensaje("no existe el id"), HttpStatus.NOT_FOUND);
